@@ -1,6 +1,6 @@
 from OCT_solver import Octahedron, solve_oct_analytical
 
-# Standard spatial vertex mapping as per Figure 2 [cite: 74]
+# Standard spatial vertex mapping 
 V_VERTS = {'v1': 'f', 'v2': 'r', 'v3': 'u', 'v4': 'l', 'v5': 'd', 'v6': 'b'}
 U_VERTS = {'u1': 'f', 'u2': 'r', 'u3': 'u', 'u4': 'l', 'u5': 'd', 'u6': 'b'}
 
@@ -9,7 +9,7 @@ def complete_blueprint(bp, prefix='v', placeholder_prefix='h'):
     for i in range(1, 7):
         vid = f"{prefix}{i}"
         if vid not in bp:
-            # Placeholders represent the 4 non-visible faces for hidden vertices [cite: 89]
+            # Placeholders represent the 4 non-visible faces for hidden vertices 
             bp[vid] = [f"{placeholder_prefix}{i}_1", f"{placeholder_prefix}{i}_2", 
                        f"{placeholder_prefix}{i}_3", f"{placeholder_prefix}{i}_4"]
     return bp
@@ -225,7 +225,7 @@ def run_scenarios():
         'f5': (['u3', 'u6', 'u2'], 'k1', ('u3', 'u6', 'alpha2_5')), 'f6': (['u3', 'u4', 'u6'], 'k2', ('u3', 'u4', 'alpha2_6')),
         'f7': (['u6', 'u4', 'u5'], 'k4', ('u6', 'u4', 'alpha2_7')), 'f8': (['u6', 'u5', 'u2'], 'k3', ('u6', 'u5', 'alpha2_8'))
     }
-    # Full blueprints for successful topological verification [cite: 147, 180]
+    # Full blueprints for successful topological verification 
     v_bp_10 = {
         'v1': ['D', 'B', 'O', '5'], 'v2': ['B', 'h1', 'h3', 'O'], 'v3': ['B', 'D', 'h2', 'h1'],
         'v4': ['D', '5', 'h4', 'h2'], 'v5': ['5', 'O', 'h3', 'h4'], 'v6': ['h1', 'h2', 'h4', 'h3']
