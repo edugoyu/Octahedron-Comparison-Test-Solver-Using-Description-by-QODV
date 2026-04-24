@@ -1,0 +1,5 @@
+# Core visualization library for 3D octahedron rendering
+pyvista>=0.43.0
+
+# Numerical operations for rotation matrices and vertex calculations
+numpy>=1.21.0
