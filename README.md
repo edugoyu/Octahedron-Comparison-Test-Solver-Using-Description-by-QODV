@@ -32,7 +32,7 @@ The descriptor for a face $f$ is defined as $QODV_F(f) = (Adj_v(f), Feature(f), 
 
 ## Usage
 * `OCT_solver.py` Python module that provides the logic to solve a case for the OCT, both analytically (using the algorithm described in the paper) and by brute force.
-* `comps_solved.py` Solves different ilustrative examples of octahedron comparisons. The visuals of the examples are provided in the comps file.
+* `comps_solved.py` Solves different ilustrative examples of octahedron comparisons. The visuals of the examples are provided in the comps file, and the output text is provided in `output.txt`.
 * `octahedrons_visual.py` Python file to visualize how an octahedron with features rotates. Used to create the different cases.
 
 ## Installation
