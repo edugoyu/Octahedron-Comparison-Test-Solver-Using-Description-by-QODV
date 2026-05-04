@@ -237,33 +237,6 @@ def run_scenarios():
     solve_oct_analytical(Octahedron("V10", V_VERTS, v_f_10), Octahedron("U10", U_VERTS, u_f_10), v_bp_10, u_bp_10)
 
 
-    # ==========================================
-    # SCENARIO 11: 2 shared, different angle orientation
-    # ==========================================
-    print("\n" + "="*50 + "\nSCENARIO 11: 2 shared, different angle orientation\n" + "="*50)
-    v_f_11 = {
-        'f1': (['v1','v4','v3'], 'A', ('v4','v3','90')), 'f2': (['v1','v3','v2'], 'B', ('v1','v2','0')),
-        'f3': (['v1','v2','v5'], 'D', ('v2','v5','0')), 'f4': (['v1','v5','v4'], 'C', ('v5','v4','0')),
-        'f5': (['v3', 'v6', 'v2'], 'h1', ('v3', 'v6', 'alpha5')), 'f6': (['v3', 'v4', 'v6'], 'h2', ('v3', 'v4', 'alpha6')),
-        'f7': (['v6', 'v4', 'v5'], 'h4', ('v6', 'v4', 'alpha7')), 'f8': (['v6', 'v5', 'v2'], 'h3', ('v6', 'v5', 'alpha8'))
-    }
-    u_f_11 = {
-        'f1': (['u1','u4','u3'], 'X', ('u4','u1','30')), 'f2': (['u1','u3','u2'], 'B', ('u3','u2','0')), 
-        'f3': (['u1','u2','u5'], 'A', ('u1','u5','180')), 'f4': (['u1','u5','u4'], 'N', ('u5','u4','15')),
-        'f5': (['u3', 'u6', 'u2'], 'k1', ('u3', 'u6', 'alpha2_5')), 'f6': (['u3', 'u4', 'u6'], 'k2', ('u3', 'u4', 'alpha2_6')),
-        'f7': (['u6', 'u4', 'u5'], 'k4', ('u6', 'u4', 'alpha2_7')), 'f8': (['u6', 'u5', 'u2'], 'k3', ('u6', 'u5', 'alpha2_8'))
-    }
-    # Blueprints mapping features from f1-f8 to vertices v1-v6
-    v_bp_11 = {
-        'v1': ['A', 'B', 'D', 'C'], 'v2': ['B', 'h1', 'h3', 'D'], 'v3': ['B', 'A', 'h2', 'h1'],
-        'v4': ['A', 'C', 'h4', 'h2'], 'v5': ['C', 'D', 'h3', 'h4'], 'v6': ['h1', 'h2', 'h4', 'h3']
-    }
-    u_bp_11 = {
-        'u1': ['X', 'B', 'A', 'N'], 'u2': ['B', 'k1', 'k3', 'A'], 'u3': ['B', 'X', 'k2', 'k1'],
-        'u4': ['X', 'N', 'k4', 'k2'], 'u5': ['N', 'A', 'k3', 'k4'], 'u6': ['k1', 'k2', 'k4', 'k3']
-    }
-    solve_oct_analytical(Octahedron("V11", V_VERTS, v_f_11), Octahedron("U11", U_VERTS, u_f_11), v_bp_11, u_bp_11)
-
 
     
 
