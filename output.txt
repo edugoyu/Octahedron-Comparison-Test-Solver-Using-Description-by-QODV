@@ -1,0 +1,247 @@
+
+==================================================
+SCENARIO 1: No Common Features
+==================================================
+
+--- ANALYTICAL SOLVER  ---
+  Step: 0 Common Features. Applying 180-degree flip (tl, tl).
+
+==================================================
+SCENARIO 2: One Common Feature
+==================================================
+
+--- ANALYTICAL SOLVER  ---
+  [!] ABORT: 1 or 3 features is physically impossible.
+
+==================================================
+SCENARIO 3: Three Common Features
+==================================================
+
+--- ANALYTICAL SOLVER  ---
+  [!] ABORT: 1 or 3 features is physically impossible.
+
+==================================================
+SCENARIO 4: Two Common, No Shared Edge
+==================================================
+
+--- ANALYTICAL SOLVER  ---
+  [!] FAILURE: No structural match for the front vertex. Different Octahedrons. No possible sequence of rotations.
+
+==================================================
+SCENARIO 5: Two Common, Structural Mismatch
+==================================================
+
+--- ANALYTICAL SOLVER  ---
+  [!] FAILURE: No structural match for the front vertex. Different Octahedrons. No possible sequence of rotations.
+
+==================================================
+SCENARIO 6: Different Orientations
+==================================================
+
+--- ANALYTICAL SOLVER  ---
+  [!] FAILURE: No structural match for the front vertex. Different Octahedrons. No possible sequence of rotations.
+
+==================================================
+SCENARIO 7: Same Octahedron, 2 Shared
+==================================================
+
+--- ANALYTICAL SOLVER  ---
+Step: Moving v3 from U to FRONT via ['td']
+
+Possibility of octahedrons matching, applying clock-wise rotations until sequence is found or 4 have been applied without success
+>> SUCCESS! Sequence found: ['td', 'cw', 'cw', 'cw']
+
+[DEBUG] Generating Vertex ID Mapping...
+  Location F: v3 -> u1
+  Location R: v1 -> u2
+  Location U: v2 -> u3
+  Location L: v6 -> u4
+  Location D: v4 -> u5
+  Location B: v5 -> u6
+
+--- Face Descriptor Comparison (QODV_F) ---
+
+Searching for match for Octa1 Face: f1 (Feature: A)
+  [POTENTIAL MATCH] Trying f1 vs f3 (Features: A <-> A)
+    Checking Oriented Vertex Sequences:
+      Original V1: ['v1', 'v4', 'v3'] | Mapped to Octa2 IDs: ['u2', 'u5', 'u1']
+      Target V2:   ['u1', 'u2', 'u5']
+    Checking Hinge/Angle:
+      Edge Mapped: {'u5', 'u1'} | Edge Target: {'u5', 'u1'}
+      Angle 1: '180' | Angle 2: '180'
+    [RESULT] SUCCESS: Face descriptors match exactly.
+
+Searching for match for Octa1 Face: f2 (Feature: B)
+  [POTENTIAL MATCH] Trying f2 vs f2 (Features: B <-> B)
+    Checking Oriented Vertex Sequences:
+      Original V1: ['v1', 'v3', 'v2'] | Mapped to Octa2 IDs: ['u2', 'u1', 'u3']
+      Target V2:   ['u1', 'u3', 'u2']
+    Checking Hinge/Angle:
+      Edge Mapped: {'u3', 'u2'} | Edge Target: {'u3', 'u2'}
+      Angle 1: '0' | Angle 2: '0'
+    [RESULT] SUCCESS: Face descriptors match exactly.
+
+Searching for match for Octa1 Face: f3 (Feature: D)
+  [POTENTIAL MATCH] Trying f3 vs f5 (Features: D <-> k1)
+    Checking Oriented Vertex Sequences:
+      Original V1: ['v1', 'v2', 'v5'] | Mapped to Octa2 IDs: ['u2', 'u3', 'u6']
+      Target V2:   ['u3', 'u6', 'u2']
+    [!] Wildcard Match: Angle '0' or 'alpha2_5' is a placeholder.
+    [RESULT] SUCCESS: Bypassing strict edge/angle comparison due to unknown variable.
+
+Searching for match for Octa1 Face: f4 (Feature: C)
+  [POTENTIAL MATCH] Trying f4 vs f8 (Features: C <-> k3)
+    Checking Oriented Vertex Sequences:
+      Original V1: ['v1', 'v5', 'v4'] | Mapped to Octa2 IDs: ['u2', 'u6', 'u5']
+      Target V2:   ['u6', 'u5', 'u2']
+    [!] Wildcard Match: Angle '0' or 'alpha2_8' is a placeholder.
+    [RESULT] SUCCESS: Bypassing strict edge/angle comparison due to unknown variable.
+
+Searching for match for Octa1 Face: f5 (Feature: h1)
+  [POTENTIAL MATCH] Trying f5 vs f1 (Features: h1 <-> X)
+    Checking Oriented Vertex Sequences:
+      Original V1: ['v3', 'v6', 'v2'] | Mapped to Octa2 IDs: ['u1', 'u4', 'u3']
+      Target V2:   ['u1', 'u4', 'u3']
+    [!] Wildcard Match: Angle 'alpha5' or '30' is a placeholder.
+    [RESULT] SUCCESS: Bypassing strict edge/angle comparison due to unknown variable.
+
+Searching for match for Octa1 Face: f6 (Feature: h2)
+  [POTENTIAL MATCH] Trying f6 vs f4 (Features: h2 <-> N)
+    Checking Oriented Vertex Sequences:
+      Original V1: ['v3', 'v4', 'v6'] | Mapped to Octa2 IDs: ['u1', 'u5', 'u4']
+      Target V2:   ['u1', 'u5', 'u4']
+    [!] Wildcard Match: Angle 'alpha6' or '15' is a placeholder.
+    [RESULT] SUCCESS: Bypassing strict edge/angle comparison due to unknown variable.
+
+Searching for match for Octa1 Face: f7 (Feature: h4)
+  [POTENTIAL MATCH] Trying f7 vs f7 (Features: h4 <-> k4)
+    Checking Oriented Vertex Sequences:
+      Original V1: ['v6', 'v4', 'v5'] | Mapped to Octa2 IDs: ['u4', 'u5', 'u6']
+      Target V2:   ['u6', 'u4', 'u5']
+    [!] Wildcard Match: Angle 'alpha7' or 'alpha2_7' is a placeholder.
+    [RESULT] SUCCESS: Bypassing strict edge/angle comparison due to unknown variable.
+
+Searching for match for Octa1 Face: f8 (Feature: h3)
+  [POTENTIAL MATCH] Trying f8 vs f6 (Features: h3 <-> k2)
+    Checking Oriented Vertex Sequences:
+      Original V1: ['v6', 'v5', 'v2'] | Mapped to Octa2 IDs: ['u4', 'u6', 'u3']
+      Target V2:   ['u3', 'u4', 'u6']
+    [!] Wildcard Match: Angle 'alpha8' or 'alpha2_6' is a placeholder.
+    [RESULT] SUCCESS: Bypassing strict edge/angle comparison due to unknown variable.
+
+==============================
+SUCCESS: BOTH OCTAHEDRONS ARE QUALITATIVELY IDENTICAL
+
+==================================================
+SCENARIO 8: Four Shared, Incorrect Order
+==================================================
+
+--- ANALYTICAL SOLVER  ---
+  [!] FAILURE: No structural match for the front vertex. Different Octahedrons. No possible sequence of rotations.
+
+==================================================
+SCENARIO 9: Four Shared, Incorrect Orientation
+==================================================
+
+--- ANALYTICAL SOLVER  ---
+Step: Moving v1 from F to FRONT via []
+
+Possibility of octahedrons matching, applying clock-wise rotations until sequence is found or 4 have been applied without success
+
+>> FAILURE: Vertices match but face orientations (QODV_F) do not.
+
+==================================================
+SCENARIO 10: Identical Octahedrons
+==================================================
+
+--- ANALYTICAL SOLVER  ---
+Step: Moving v1 from F to FRONT via []
+
+Possibility of octahedrons matching, applying clock-wise rotations until sequence is found or 4 have been applied without success
+>> SUCCESS! Sequence found: ['cw', 'cw', 'cw']
+
+[DEBUG] Generating Vertex ID Mapping...
+  Location F: v1 -> u1
+  Location R: v5 -> u2
+  Location U: v2 -> u3
+  Location L: v3 -> u4
+  Location D: v4 -> u5
+  Location B: v6 -> u6
+
+--- Face Descriptor Comparison (QODV_F) ---
+
+Searching for match for Octa1 Face: f1 (Feature: D)
+  [POTENTIAL MATCH] Trying f1 vs f4 (Features: D <-> D)
+    Checking Oriented Vertex Sequences:
+      Original V1: ['v1', 'v4', 'v3'] | Mapped to Octa2 IDs: ['u1', 'u5', 'u4']
+      Target V2:   ['u1', 'u5', 'u4']
+    Checking Hinge/Angle:
+      Edge Mapped: {'u5', 'u4'} | Edge Target: {'u5', 'u4'}
+      Angle 1: '0' | Angle 2: '0'
+    [RESULT] SUCCESS: Face descriptors match exactly.
+
+Searching for match for Octa1 Face: f2 (Feature: B)
+  [POTENTIAL MATCH] Trying f2 vs f1 (Features: B <-> B)
+    Checking Oriented Vertex Sequences:
+      Original V1: ['v1', 'v3', 'v2'] | Mapped to Octa2 IDs: ['u1', 'u4', 'u3']
+      Target V2:   ['u1', 'u4', 'u3']
+    Checking Hinge/Angle:
+      Edge Mapped: {'u3', 'u4'} | Edge Target: {'u3', 'u4'}
+      Angle 1: '0' | Angle 2: '0'
+    [RESULT] SUCCESS: Face descriptors match exactly.
+
+Searching for match for Octa1 Face: f3 (Feature: O)
+  [POTENTIAL MATCH] Trying f3 vs f2 (Features: O <-> O)
+    Checking Oriented Vertex Sequences:
+      Original V1: ['v1', 'v2', 'v5'] | Mapped to Octa2 IDs: ['u1', 'u3', 'u2']
+      Target V2:   ['u1', 'u3', 'u2']
+    Checking Hinge/Angle:
+      Edge Mapped: {'u3', 'u2'} | Edge Target: {'u3', 'u2'}
+      Angle 1: '0' | Angle 2: '0'
+    [RESULT] SUCCESS: Face descriptors match exactly.
+
+Searching for match for Octa1 Face: f4 (Feature: 5)
+  [POTENTIAL MATCH] Trying f4 vs f3 (Features: 5 <-> 5)
+    Checking Oriented Vertex Sequences:
+      Original V1: ['v1', 'v5', 'v4'] | Mapped to Octa2 IDs: ['u1', 'u2', 'u5']
+      Target V2:   ['u1', 'u2', 'u5']
+    Checking Hinge/Angle:
+      Edge Mapped: {'u5', 'u1'} | Edge Target: {'u5', 'u1'}
+      Angle 1: '0' | Angle 2: '0'
+    [RESULT] SUCCESS: Face descriptors match exactly.
+
+Searching for match for Octa1 Face: f5 (Feature: h1)
+  [POTENTIAL MATCH] Trying f5 vs f6 (Features: h1 <-> k2)
+    Checking Oriented Vertex Sequences:
+      Original V1: ['v3', 'v6', 'v2'] | Mapped to Octa2 IDs: ['u4', 'u6', 'u3']
+      Target V2:   ['u3', 'u4', 'u6']
+    [!] Wildcard Match: Angle 'alpha5' or 'alpha2_6' is a placeholder.
+    [RESULT] SUCCESS: Bypassing strict edge/angle comparison due to unknown variable.
+
+Searching for match for Octa1 Face: f6 (Feature: h2)
+  [POTENTIAL MATCH] Trying f6 vs f7 (Features: h2 <-> k4)
+    Checking Oriented Vertex Sequences:
+      Original V1: ['v3', 'v4', 'v6'] | Mapped to Octa2 IDs: ['u4', 'u5', 'u6']
+      Target V2:   ['u6', 'u4', 'u5']
+    [!] Wildcard Match: Angle 'alpha6' or 'alpha2_7' is a placeholder.
+    [RESULT] SUCCESS: Bypassing strict edge/angle comparison due to unknown variable.
+
+Searching for match for Octa1 Face: f7 (Feature: h4)
+  [POTENTIAL MATCH] Trying f7 vs f8 (Features: h4 <-> k3)
+    Checking Oriented Vertex Sequences:
+      Original V1: ['v6', 'v4', 'v5'] | Mapped to Octa2 IDs: ['u6', 'u5', 'u2']
+      Target V2:   ['u6', 'u5', 'u2']
+    [!] Wildcard Match: Angle 'alpha7' or 'alpha2_8' is a placeholder.
+    [RESULT] SUCCESS: Bypassing strict edge/angle comparison due to unknown variable.
+
+Searching for match for Octa1 Face: f8 (Feature: h3)
+  [POTENTIAL MATCH] Trying f8 vs f5 (Features: h3 <-> k1)
+    Checking Oriented Vertex Sequences:
+      Original V1: ['v6', 'v5', 'v2'] | Mapped to Octa2 IDs: ['u6', 'u2', 'u3']
+      Target V2:   ['u3', 'u6', 'u2']
+    [!] Wildcard Match: Angle 'alpha8' or 'alpha2_5' is a placeholder.
+    [RESULT] SUCCESS: Bypassing strict edge/angle comparison due to unknown variable.
+
+==============================
+SUCCESS: BOTH OCTAHEDRONS ARE QUALITATIVELY IDENTICAL
+
