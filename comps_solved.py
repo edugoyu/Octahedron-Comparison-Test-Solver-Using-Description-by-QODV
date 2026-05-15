@@ -1,3 +1,4 @@
+# Solves the paradigmatic examples from OCT_examples
 from OCT_solver import Octahedron, solve_oct_analytical
 
 # Standard spatial vertex mapping 
@@ -16,7 +17,7 @@ def complete_blueprint(bp, prefix='v', placeholder_prefix='h'):
 
 def run_scenarios():
     # ==========================================
-    # SCENARIO 1: No Common Features (comp1.png)
+    # SCENARIO 1: No Common Features 
     # ==========================================
     print("\n" + "="*50 + "\nSCENARIO 1: No Common Features\n" + "="*50)
     v_f_1 = {
@@ -43,7 +44,7 @@ def run_scenarios():
     solve_oct_analytical(Octahedron("V1", V_VERTS, v_f_1), Octahedron("U1", U_VERTS, u_f_1), v_bp_1, u_bp_1)
 
     # ==========================================
-    # SCENARIO 2: One Common Feature (comp2.png)
+    # SCENARIO 2: One Common Feature 
     # ==========================================
     print("\n" + "="*50 + "\nSCENARIO 2: One Common Feature\n" + "="*50)
     v_f_2 = {
@@ -63,7 +64,7 @@ def run_scenarios():
     solve_oct_analytical(Octahedron("V2", V_VERTS, v_f_2), Octahedron("U2", U_VERTS, u_f_2), v_bp_2, u_bp_2)
 
     # ==========================================
-    # SCENARIO 3: Three Common Features (comp3.png)
+    # SCENARIO 3: Three Common Features 
     # ==========================================
     print("\n" + "="*50 + "\nSCENARIO 3: Three Common Features\n" + "="*50)
     v_f_3 = {
@@ -83,7 +84,7 @@ def run_scenarios():
     solve_oct_analytical(Octahedron("V3", V_VERTS, v_f_3), Octahedron("U3", U_VERTS, u_f_3), v_bp_3, u_bp_3)
 
     # ==========================================
-    # SCENARIO 4: Two Common, No Shared Edge (comp4.png)
+    # SCENARIO 4: Two Common, No Shared Edge 
     # ==========================================
     print("\n" + "="*50 + "\nSCENARIO 4: Two Common, No Shared Edge\n" + "="*50)
     v_f_4 = {
@@ -103,7 +104,7 @@ def run_scenarios():
     solve_oct_analytical(Octahedron("V4", V_VERTS, v_f_4), Octahedron("U4", U_VERTS, u_f_4), v_bp_4, u_bp_4)
 
     # ==========================================
-    # SCENARIO 5: Two Common, Structural Mismatch
+    # SCENARIO 5: Two Common features-rotation hides features
     # ==========================================
     print("\n" + "="*50 + "\nSCENARIO 5: Two Common, Structural Mismatch\n" + "="*50)
     v_f_5 = {
@@ -123,7 +124,7 @@ def run_scenarios():
     solve_oct_analytical(Octahedron("V5", V_VERTS, v_f_5), Octahedron("U5", U_VERTS, u_f_5), v_bp_5, u_bp_5)
 
     # ==========================================
-    # SCENARIO 6: Different Orientations
+    # SCENARIO 6: Two common features, different orientations
     # ==========================================
     print("\n" + "="*50 + "\nSCENARIO 6: Different Orientations\n" + "="*50)
     v_f_6 = {
@@ -143,7 +144,7 @@ def run_scenarios():
     solve_oct_analytical(Octahedron("V6", V_VERTS, v_f_6), Octahedron("U6", U_VERTS, u_f_6), v_bp_6, u_bp_6)
 
     # ==========================================
-    # SCENARIO 7: Same Octahedron, 2 Shared
+    # SCENARIO 7: Two common features, same octahedron
     # ==========================================
     print("\n" + "="*50 + "\nSCENARIO 7: Same Octahedron, 2 Shared\n" + "="*50)
     v_f_7 = {
@@ -170,7 +171,7 @@ def run_scenarios():
     solve_oct_analytical(Octahedron("V7", V_VERTS, v_f_7), Octahedron("U7", U_VERTS, u_f_7), v_bp_7, u_bp_7)
 
     # ==========================================
-    # SCENARIO 8: Four Shared, Incorrect Order
+    # SCENARIO 8: Four features common, incorrect order
     # ==========================================
     print("\n" + "="*50 + "\nSCENARIO 8: Four Shared, Incorrect Order\n" + "="*50)
     v_f_8 = {
@@ -190,7 +191,7 @@ def run_scenarios():
     solve_oct_analytical(Octahedron("V8", V_VERTS, v_f_8), Octahedron("U8", U_VERTS, u_f_8), v_bp_8, u_bp_8)
 
     # ==========================================
-    # SCENARIO 9: Four Shared, Incorrect Orientation
+    # SCENARIO 9: Four common features, incorrect orientation
     # ==========================================
     print("\n" + "="*50 + "\nSCENARIO 9: Four Shared, Incorrect Orientation\n" + "="*50)
     v_f_9 = {
@@ -210,7 +211,7 @@ def run_scenarios():
     solve_oct_analytical(Octahedron("V9", V_VERTS, v_f_9), Octahedron("U9", U_VERTS, u_f_9), v_bp_9, u_bp_9)
 
     # ==========================================
-    # SCENARIO 10: Identical Octahedrons (comp10.png)
+    # SCENARIO 10: Four common features, identical octahedrons.
     # ==========================================
     print("\n" + "="*50 + "\nSCENARIO 10: Identical Octahedrons\n" + "="*50)
     v_f_10 = {
